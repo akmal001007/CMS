@@ -1,10 +1,11 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
-  { name: "Home", href: "#", current: false },
+  { name: "Home", href: "/", current: false },
   { name: "Courses", href: "#", current: false },
   { name: "Teachers", href: "#", current: false },
   { name: "About Us", href: "#", current: false },
@@ -34,10 +35,10 @@ const Header = () => {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex items-center">
                   <img
                     src="../public/images/logo.png"
-                    className="h-8 w-auto"
+                    className="h-10 w-auto"
                     alt="Your Company"
                   />
                 </div>
@@ -119,28 +120,46 @@ const Header = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          //   <a
+                          //     href="./Login"
+                          //     className={classNames(
+                          //       active ? "bg-gray-100" : "",
+                          //       "block px-4 py-2 text-sm text-gray-700"
+                          //     )}
+                          //   >
+                          //     Login
+                          //   </a>
+                          <Link
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
+                            to="/login"
                           >
                             Login
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          //   <a
+                          //     href="#"
+                          //     className={classNames(
+                          //       active ? "bg-gray-100" : "",
+                          //       "block px-4 py-2 text-sm text-gray-700"
+                          //     )}
+                          //   >
+                          //     Register
+                          //   </a>
+                          <Link
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
+                            to="/register"
                           >
                             Register
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>

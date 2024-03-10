@@ -3,8 +3,8 @@ import React from "react";
 const Hero = () => {
   return (
     <section>
-      <div className="flex mt-10 justify-center">
-        <div className="w-1/2 ml-10 mt-56">
+      <div className="flex mt-6 justify-center">
+        <div className="w-1/2 ml-10 mt-36">
           <div>
             <p className="text-xl text-buttonColor">Ganj Educational Center</p>
             <p className="font-bold text-4xl mt-1">
@@ -26,7 +26,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="w-1/2">
-          <img src="../public/images/books.png" alt="" />
+          <img src="../public/images/books.png" alt="books" />
         </div>
       </div>
     </section>
