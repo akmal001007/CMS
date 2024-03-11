@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-
+import DarkMode from "./DarkMode"
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
   { name: "Home", href: "/", current: false },
@@ -17,14 +17,14 @@ function classNames(...classes) {
 
 const Header = () => {
   return (
-    <Disclosure as="nav" className="bg-navbarColor border-b-2">
+    <Disclosure as="nav" className="bg-navbarColor border-b-2 dark:bg-gray-600">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-buttonColor hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -45,9 +45,22 @@ const Header = () => {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      // <a
+                      //   key={item.name}
+                      //   href={item.href}
+                      //   className={classNames(
+                      //     item.current
+                      //       ? "bg-buttonColor text-navbarTextColor hover:text-gray-800"
+                      //       : "text-navbarTextColor hover:bg-buttonColor hover:text-gray-800",
+                      //     "rounded-md px-3 py-2 text-sm font-medium"
+                      //   )}
+                      //   aria-current={item.current ? "page" : undefined}
+                      // >
+                      //   {item.name}
+                      // </a>
+                      <Link
+                        to={item.href}
                         key={item.name}
-                        href={item.href}
                         className={classNames(
                           item.current
                             ? "bg-buttonColor text-navbarTextColor hover:text-gray-800"
@@ -57,7 +70,7 @@ const Header = () => {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -71,6 +84,9 @@ const Header = () => {
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
+                <div>
+                  <DarkMode />
+                </div>
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
@@ -191,8 +207,8 @@ const Header = () => {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      ? "bg-buttonColor text-gray-800 hover:text-gray-100"
+                      : "text-gray-800 hover:bg-buttonColor hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}

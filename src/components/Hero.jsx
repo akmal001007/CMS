@@ -3,9 +3,9 @@ import React from "react";
 const Hero = () => {
   return (
     <section>
-      <div className="flex mt-6 justify-center">
-        <div className="w-1/2 ml-10 mt-36">
-          <div>
+      <div className="flex justify-between items-center">
+        <div className="w-1/2 flex flex-col items-center">
+          <div className="">
             <p className="text-xl text-buttonColor">Ganj Educational Center</p>
             <p className="font-bold text-4xl mt-1">
               Accessible Online Courses <br /> For Ganj EC Students
@@ -14,9 +14,9 @@ const Hero = () => {
               Build Your Future With New Learnings
             </p>
           </div>
-          <div className="flex mt-8">
+          <div className="flex mt-6">
             <input
-              className="border border-buttonColor rounded-full p-2"
+              className="border border-buttonColor rounded-full focus:ring-buttonColor focus:outline-none p-2"
               type="search"
               placeholder="Search"
             />
