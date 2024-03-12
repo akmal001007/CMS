@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import DarkMode from "./DarkMode"
+import DarkMode from "./DarkMode";
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
   { name: "Home", href: "/", current: false },
@@ -17,7 +17,10 @@ function classNames(...classes) {
 
 const Header = () => {
   return (
-    <Disclosure as="nav" className="bg-navbarColor border-b-2 dark:bg-gray-600">
+    <Disclosure
+      as="nav"
+      className="border-b-2 dark:border-gray-500 dark:bg-gray-700"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -63,8 +66,8 @@ const Header = () => {
                         key={item.name}
                         className={classNames(
                           item.current
-                            ? "bg-buttonColor text-navbarTextColor hover:text-gray-800"
-                            : "text-navbarTextColor hover:bg-buttonColor hover:text-gray-800",
+                            ? "bg-buttonColor text-navbarTextColor hover:text-gray-800 dark:text-slate-100"
+                            : "text-navbarTextColor hover:bg-buttonColor hover:text-gray-800 dark:text-slate-100",
                           "rounded-md px-3 py-2 text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -76,14 +79,14 @@ const Header = () => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
+                {/* <button
                   type="button"
                   className="relative rounded-full bg-buttonColor p-1 text-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </button> */}
                 <div>
                   <DarkMode />
                 </div>
@@ -95,7 +98,7 @@ const Header = () => {
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
 
-                      <div className="relative w-10 h-10 overflow-hidden bg-buttonColor rounded-full dark:bg-gray-700">
+                      <div className="relative w-10 h-10 overflow-hidden bg-buttonColor rounded-full dark:bg-buttonColor">
                         <svg
                           className="absolute w-12 h-12 text-gray-100 -left-1"
                           fill="currentColor"

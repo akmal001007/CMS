@@ -2,15 +2,15 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section>
+    <section id="hero" className="dark:bg-gray-700 border-2 dark:border-gray-500">
       <div className="flex justify-between items-center">
         <div className="w-1/2 flex flex-col items-center">
           <div className="">
             <p className="text-xl text-buttonColor">Ganj Educational Center</p>
             <p className="font-bold text-4xl mt-1">
-              Accessible Online Courses <br /> For Ganj EC Students
+              Accessible Online Courses <br /> For Ganj(GEC) Students
             </p>
-            <p className="text-gray-800 mt-2">
+            <p className="text-gray-900 font-bold mt-2 dark:text-slate-100">
               Build Your Future With New Learnings
             </p>
           </div>
