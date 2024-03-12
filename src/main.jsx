@@ -3,10 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "tailwindcss/tailwind.css";
+// import "tailwindcss/tailwind.css";
 import Login from "./components/Login.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import Register from "./components/Register.jsx";
+import DashLayout from "./dashboard/shared/DashLayout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />
+  },
+  {
+    path: "/dashboard",
+    element: <DashLayout />
   },
   {
     path: "/*",

@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="flex justify-center items-center space-x-8 dark:border-b-2 border-gray-500 dark:bg-gray-700">
+    <div id="about" className="flex justify-center items-center space-x-8 dark:border-b-2 border-b-2 dark:bg-gray-700">
       <div className="w-1/2">
         <img
           src="../public/images/children.png"
