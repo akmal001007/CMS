@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "./Sidebar";
 
 const DashLayout = () => {
   return (
-    <div>DashLayout</div>
-  )
-}
+    <div className="flex h-screen w-screen bg-navbarColor">
+      <Sidebar />
+      <div>
+         
+      </div>
+    </div>
+  );
+};
 
-export default DashLayout
+export default DashLayout;

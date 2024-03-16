@@ -8,6 +8,7 @@ export default {
         navbarColor: "#f1f5f9",
         navbarTextColor: "#020617",
         buttonColor: "#f97316",
+        sidebarColor: "#f97316",
       },
     },
   },
