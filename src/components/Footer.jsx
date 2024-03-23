@@ -58,7 +58,7 @@ const userProf = [
 ];
 const Footer = () => {
   return (
-    <div id="footer" className="dark:bg-gray-700 dark:text-slate-100">
+    <div id="footer" className="dark:text-slate-100">
       <div className="flex space-x-8 items-end justify-between mt-8 mb-8">
         <div className="flex flex-col ml-4">
           <img src="../public/images/logo.png" alt="logo" className="w-32" />

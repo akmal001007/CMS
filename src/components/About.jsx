@@ -1,13 +1,11 @@
 import React from "react";
-import Header from "./Header";
 
 const About = () => {
   return (
-    <div>
-
+    <div className="container p-8 mx-8">
       <div
         id="about"
-        className="flex justify-center items-center space-x-8 dark:border-b-2 border-b-2 dark:bg-gray-700"
+        className="flex justify-center items-center space-x-8 dark:border-b-2 border-b-2"
       >
         <div className="w-1/2">
           <img

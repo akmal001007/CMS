@@ -2,13 +2,10 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="dark:bg-gray-700 border-2 dark:border-gray-500"
-    >
-      <div className="flex justify-between items-center">
+    <section id="hero" className="container mx-10 p-8">
+      <div className="flex items-center border-b-2 dark:border-gray-500">
         <div className="w-1/2 flex flex-col items-center">
-          <div className="">
+          <div className="ml-0">
             <p className="text-xl text-buttonColor">Ganj Educational Center</p>
             <p className="font-bold text-4xl mt-1">
               Accessible Online Courses <br /> For Ganj(GEC) Students
@@ -17,7 +14,7 @@ const Hero = () => {
               Build Your Future With New Learnings
             </p>
           </div>
-          <div className="flex mt-6">
+          <div className="flex mt-4">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +41,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 ml-2">
           <img src="../public/images/books.png" alt="books" />
         </div>
       </div>
