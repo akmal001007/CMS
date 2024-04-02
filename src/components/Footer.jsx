@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const navigation = [
   { name: "Dashboard", href: "#" },
@@ -58,14 +62,14 @@ const userProf = [
 const Footer = () => {
   return (
     <div id="footer" className="bg-amber-600 dark:text-slate-100">
-      <div className="flex space-x-8 items-end justify-between mt-8 mb-8">
-        <div className="flex flex-col ml-4">
+      <div className="flex space-x-8 items-end justify-between mt-8 mb-4 border-b border-gray-200">
+        <div className="flex flex-col ml-4 mb-3">
           <img
             src="../public/images/logo.png"
             alt="logo"
             className="w-28 mt-2 rounded-xl"
           />
-          <div className="flex flex-col items-center mt-2">
+          <div className="flex flex-col items-center mt-2 mb-1">
             {social.map((item) => (
               <Link
                 to={item.href}
@@ -77,7 +81,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-3">
           {navigation.map((item) => (
             <Link
               to={item.href}
@@ -88,7 +92,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-3">
           {userProf.map((item) => (
             <Link
               to={item.href}
@@ -99,14 +103,23 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-3">
           <h3>Address</h3>
-          <p>Kabul, Afghanistan</p>
-          <p>Khair-Khana, Panjsad-e-family</p>
+            <span>
+              <FontAwesomeIcon icon={faLocationDot} /> Khair-Khana, Panjsad-e-family, Kabul
+            </span>
+
+            <span>
+              <FontAwesomeIcon icon={faEnvelope} /> ganjedu@gamil.com
+            </span>
+
+            <span>
+              <FontAwesomeIcon icon={faPhone} /> 078655454
+            </span>
         </div>
       </div>
       <div className="flex justify-center">
-        <p className="mb-2">No copyright</p>
+        <p>No copyright</p>
       </div>
     </div>
   );

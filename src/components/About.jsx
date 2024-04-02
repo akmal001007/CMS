@@ -17,7 +17,7 @@ const About = () => {
             Ganj Educational Center (GEC) is providing service over <br />
             10 year with expert teachers in Afghanistan
           </p>
-          <button className="bg-buttonColor p-2 rounded-full hover:text-white">
+          <button className="bg-buttonColor mt-2 p-2 rounded-full hover:text-white">
             Email Us!
           </button>
         </div>
