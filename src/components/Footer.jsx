@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navigation = [
   { name: "Dashboard", href: "#" },
@@ -58,16 +57,20 @@ const userProf = [
 ];
 const Footer = () => {
   return (
-    <div id="footer" className="dark:text-slate-100">
+    <div id="footer" className="bg-amber-600 dark:text-slate-100">
       <div className="flex space-x-8 items-end justify-between mt-8 mb-8">
         <div className="flex flex-col ml-4">
-          <img src="../public/images/logo.png" alt="logo" className="w-32" />
+          <img
+            src="../public/images/logo.png"
+            alt="logo"
+            className="w-28 mt-2 rounded-xl"
+          />
           <div className="flex flex-col items-center mt-2">
             {social.map((item) => (
               <Link
                 to={item.href}
                 key={item.name}
-                className="flex hover:bg-buttonColor rounded-md"
+                className="flex hover:bg-gray-100 rounded-md"
               >
                 {item.name} {item.icon}
               </Link>
@@ -79,7 +82,7 @@ const Footer = () => {
             <Link
               to={item.href}
               key={item.name}
-              className="hover:bg-buttonColor rounded-md"
+              className="hover:bg-gray-100 rounded-md"
             >
               {item.name}
             </Link>
@@ -90,7 +93,7 @@ const Footer = () => {
             <Link
               to={item.href}
               key={item.name}
-              className="hover:bg-buttonColor rounded-md"
+              className="hover:bg-gray-100 rounded-md"
             >
               {item.name}
             </Link>
@@ -103,7 +106,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <p>No copyright</p>
+        <p className="mb-2">No copyright</p>
       </div>
     </div>
   );

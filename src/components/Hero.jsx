@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section id="hero" className="container mx-10 p-8">
-      <div className="flex items-center border-b-2 dark:border-gray-500">
+      <div className="flex items-center dark:border-gray-500">
         <div className="w-1/2 flex flex-col items-center">
           <div className="ml-0">
             <p className="text-xl text-buttonColor">Ganj Educational Center</p>
@@ -37,7 +37,7 @@ const Hero = () => {
               placeholder="Search"
             />
             <button className="bg-buttonColor hover:text-white text-black font-bold py-2 px-4 rounded-full">
-              Button
+              Search
             </button>
           </div>
         </div>
